@@ -1,0 +1,15 @@
+.TodoTitle{
+    color: #F56D91;
+    font-size: 48px;
+    margin-top: 5.5rem 0px;
+    text-align: center;
+    padding: 18px 0px;
+}
+
+/* @media only screen and (max-width: 475px){
+    .TodoTitle{
+        justify-content: c;
+        font-size: 88px;
+        margin-top: 6.25rem;
+    }
+} */
