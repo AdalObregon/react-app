@@ -23,10 +23,14 @@ function AppUI() {
 
   return (
     <React.Fragment>
+
       <TodoTitle />
       <TodoCounter />
-      <TodoSearch />
 
+      <TodoSearch />
+      <CreateTodoButton
+            setOpenModal = {setOpenModal}
+      />
       <TodoList>
         {error && <p>Desesperate, hubo un error...</p>}
         {loading && <p>Estamos cargando, no desesperes...</p>}
@@ -40,6 +44,7 @@ function AppUI() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
+          
         ))}
       </TodoList>
           {!!openModal && (
@@ -50,11 +55,6 @@ function AppUI() {
 
 
 
-      <CreateTodoButton
-
-            setOpenModal = {setOpenModal}
-
-      />
       {/* <FooterLegend /> */}
     </React.Fragment>
   );
